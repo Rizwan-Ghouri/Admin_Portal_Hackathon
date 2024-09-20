@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="stdaddbody">    
+    <header class="header">
+        <nav class="headNav">
+            <div class="headlogo">
+               <a class="headlogo_tag" href=""><h1 class="heading" id="heading"></h1></a> 
+            </div>
+            <div class="headsec">
+                <ul class="headsec_ul">
+                    <button class="headsec_tag" id="stdHome" ><li>Home</li></button> 
+                    <button class="headsec_tag" id="signOut" href="#" ><li>Sign Out</li></button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="continer">
+        <div class="form_continer">
+          <div class="form" id="form">
+            <h1 class="form_heading" id="heading">Add Student</h1>
+            <input type="text" class="input_text" id="stdFname" placeholder="Enter your First Name">
+            <br />
+            <br />
+            <input type="text" class="input_text" id="stdLname" placeholder="Enter your Last Name">
+            <br />
+            <br />
+            <input type="email" class="input_text" id="stdEmail" placeholder="Enter your Email">
+            <br />
+            <br />
+            <input type="password" class="input_text" id="stdPass" placeholder="Enter your password">
+            <br />
+            <br />
+            <input type="number" class="input_text" id="stdCnic" placeholder="Enter your CNIC">
+            <br />
+            <br />
+            <select class="input_dropdown"  name="" id="stdselectType">
+              <option disabled selected>Select a UserType</option>
+              <option >Admin</option>
+              <option >Student</option>
+            </select>
+            <br />
+            <br />
+           <button class="form_btn_submit" id="btnsubmit" onclick="btnSubmit()">Submit</button>
+          </div>
+        </div>
+        <div class="table_continer">
+          <table class="tbl">
+            <thead class="tbl_head">
+              <tr>
+                <th>First Name</th>
+                <th>last Name</th>
+                <th>Email</th>
+                <th>CNIC</th>
+                <th>User Type</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody class="tbl_body" id="tblbody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+    <script type="module" src="stdadd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.14.0/sweetalert2.all.js" integrity="sha512-HE6XTjw3UV1hqENThKtsSn4mr3sx/lXbTSVPlOdIU3pprqz5ti16sGIGw8y5EAePRYg80O3OEBRnXPwON7vOUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

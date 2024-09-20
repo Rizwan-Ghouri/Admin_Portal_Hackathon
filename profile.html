@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="stdaddbody">    
+    <header class="header">
+        <nav class="headNav">
+            <div class="headlogo">
+               <a class="headlogo_tag" href=""><p style="color: white;" id="heading">Only Update firstName & lastName & CNIC</p></a> 
+            </div>
+            <div class="headsec">
+                <ul class="headsec_ul">
+                    <button class="headsec_tag" id="stdHome" ><li>Home</li></button> 
+                    <button class="headsec_tag" id="signOut" href="#" ><li>Sign Out</li></button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="continer">
+        <div class="form_continer">
+          <div class="form" id="form">
+            <h1 class="form_heading">Edit Profile</h1>
+            <input type="text" class="input_text" id="stdFname" placeholder="Enter your First Name">
+            <br />
+            <br />
+            <input type="text" class="input_text" id="stdLname" placeholder="Enter your Last Name">
+            <br />
+            <br />
+            <input type="number" class="input_text" id="stdCnic" placeholder="Enter your CNIC">
+            <br />
+            <br />
+           <button class="form_btn_submit" id="btnsubmit" onclick="btnSubmit()">Submit</button>
+          </div>
+        </div>
+        <div class="table_continer">
+          <table class="tbl">
+            <thead class="tbl_head">
+              <tr>
+                <th>First Name</th>
+                <th>last Name</th>
+                <th>Email</th>
+                <th>CNIC</th>
+                <th>User Type</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody class="tbl_body" id="tblbody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+    <script type="module" src="profile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.12.4/sweetalert2.all.js" integrity="sha512-7CwElIdU6YF7ExXbTE9Z4xGnaKwLdQTdaMaonRG3XRhcIqTTg9K/eEiNInwBs7UgmY6o5MA2PLEzcwf1rRWKRQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</body>
+</html>

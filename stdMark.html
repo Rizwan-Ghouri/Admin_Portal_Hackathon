@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="stdaddbody">    
+    <header class="header">
+        <nav class="headNav">
+            <div class="headlogo">
+               <a class="headlogo_tag" href=""><h1 class="heading" id="heading"></h1></a> 
+            </div>
+            <div class="headsec">
+                <ul class="headsec_ul">
+                    <button class="headsec_tag" id="stdHome" ><li>Home</li></button> 
+                    <button class="headsec_tag" id="signOut" href="#" ><li>Sign Out</li></button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="continer">
+        <div class="form_continer">
+          <div class="form" id="form">
+            <h1 class="form_heading">Student Marks</h1>
+            <input type="number" class="input_text" id="stdId" placeholder="Enter your student Id">
+            <br />
+            <br />
+            <select class="input_dropdown"  name="" id="stdCourse">
+              <option disabled selected>Select a Course</option>
+              <option >Web&App Development</option>
+              <option >AI Chatbot</option>
+              <option >Machine learning</option>
+              <option >Graphic designing</option>
+            </select>
+            <br />
+            <br />
+            <input type="number" class="input_text" disabled id="stdTotalmarks" placeholder="TotalMarks 100">
+            <br />
+            <br />
+            <input type="number" class="input_text" id="stdMarks" placeholder="Enter your Marks">
+            <br />
+            <br />
+            <select class="input_dropdown"  name="" id="stdGrade">
+              <option disabled selected>Select a Grade</option>
+              <option >A &nbsp; Excellent</option>
+              <option >B &nbsp; Very Good</option>
+              <option >C &nbsp; Good</option>
+              <option >D &nbsp; Hard Works</option>
+              <option >E &nbsp; Poor</option>
+              <option >F &nbsp; Fail</option>
+            </select>
+            <br />
+            <br />
+           <button class="form_btn_submit" id="btnsubmit" onclick="submit()">Submit</button>
+          </div>
+        </div>
+        <div class="table_continer">
+          <table class="tbl">
+            <thead class="tbl_head">
+              <tr>
+                <th>Student Id</th>
+                <th>Course</th>
+                <th>Total Marks</th>
+                <th>Marks</th>
+                <th>Grade&Remarks</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody class="tbl_body" id="tblbody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+    <script type="module" src="stdMark.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.14.0/sweetalert2.all.js" integrity="sha512-HE6XTjw3UV1hqENThKtsSn4mr3sx/lXbTSVPlOdIU3pprqz5ti16sGIGw8y5EAePRYg80O3OEBRnXPwON7vOUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

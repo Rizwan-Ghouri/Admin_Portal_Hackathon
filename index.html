@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="loginbody">
+
+    <div class="continerlog" >
+
+        <img class="image" src="img/banner.jpg" alt="">
+        <div class="continer_Acc_log" data-aos="flip-right">
+
+            <h1 class="headAcc">User Type</h1>
+            <select name="" class="inputAccselect" id="inputselect">
+                <option disabled selected>Select your type</option>
+                <option>Admin</option>
+                <option>Student</option>
+            </select>
+            
+            <button class="btnlog" id="btnEnter" onclick="btnenter()">Enter <i class="fa-solid fa-right-to-bracket"></i></button><br>
+            <button class="btnlog" id="Admin" disabled onclick="btnenter()">Admin </button>
+            <button class="btnlog" id="Student" disabled onclick="btnenter()">Student</button>
+        </div>
+
+    </div>
+
+    <script type="module" src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.12.4/sweetalert2.all.js" integrity="sha512-7CwElIdU6YF7ExXbTE9Z4xGnaKwLdQTdaMaonRG3XRhcIqTTg9K/eEiNInwBs7UgmY6o5MA2PLEzcwf1rRWKRQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>

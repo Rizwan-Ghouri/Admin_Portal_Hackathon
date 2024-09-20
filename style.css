@@ -1,0 +1,414 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+/** ================= Continer Css =================== */
+.loginbody{
+    overflow: hidden;
+}
+.continer{
+    border: 1px solid red;
+    width: 99.79%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    /* z-index: 100; */
+}
+.continerlog{
+    /* border: 1px solid red; */
+    width: 99.99%;
+    height: 642px;
+    position: relative;
+    z-index: 100;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    
+}
+/** ================= Continer-Acc Css =================== */
+.continer_Acc{
+    border: 1px solid rgb(241, 54, 54);
+    border-radius: 10px;
+    width: 30%;
+    height: auto;
+    line-height: 80px;
+    position: absolute;
+    top:10%;
+    left: 35%;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: #00000060;
+    z-index: 100;
+}
+.continer_Acc_log{
+    border: 1px solid rgb(241, 54, 54);
+    border-radius: 10px;
+    width: 30%;
+    height: auto;
+    line-height: 80px;
+    position: absolute;
+    top:20%;
+    left: 35%;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: #00000060;
+    z-index: 100;
+}
+.headAcc{
+    color: #fff;
+}
+.inputAcc{
+    width: 90%;
+    font-size: larger;
+    padding: 2%;
+    margin: 3%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    border-bottom: 2px solid #fff;
+}
+.inputAccselect{
+    width: 93%;
+    font-size: larger;
+    padding: 2%;
+    margin: 3%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    border-bottom: 2px solid #fff;
+}
+.inputAccselect>option{
+    color: #000;
+}
+.inputAcc{
+    background: transparent;
+}
+.btnAcc{
+    width: 90%;
+    padding: 2%;
+    margin: 3%;
+    font-size: x-large;
+    color: #000;
+    background-color: rgb(255, 174, 0);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/** ================= Continer-log Css =================== */
+.btnlog{
+    width: 40%;
+    padding: 2%;
+    margin: 1%;
+    font-size: x-large;
+    color: #000;
+    background-color: #ffae00;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.btnimg{
+    font-size: x-large;
+}
+
+/* **************************************** */
+/** ================= index form =================== */
+
+.header{
+    padding: 0px;
+    /* border: 1px solid red; */
+    /* background-color: #0266d8; */
+    color: #fff;
+    background-color: #022144;
+}
+.headNav{
+    padding: 1px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+.heading{
+    font-size: 50px;
+    color: #fff;
+}
+.headlogo{
+    width: 30%;
+    padding: 5px;
+    /* border: 1px solid red; */
+    
+}
+.headsec{
+    width: 80%;
+    padding: 5px;
+    /* border: 1px solid red; */
+    
+}
+.headsec_ul{
+    padding: 5px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3%;
+}
+.headsec_tag{
+    padding: 1%;
+    text-decoration: none;
+    font-size: larger;
+    color: #fff;
+    background-color: #000;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.headsec_tag:hover{
+    padding: 1%;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bolder;
+    color: #022144;
+    background-color: #ffffffb0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.headlogo_tag{
+    text-decoration: none;
+    font-size: larger;
+    color: #000000;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* **************************************** */
+/* Student  Add  && Result form */
+/* -----------continer Design--------- */
+.stdaddbody{
+    overflow: hidden;
+}
+.continer{
+    width: 100%;
+    padding: 1px;
+    display: flex;
+    /* border: 3px solid red; */
+}
+/* -----------Form Design--------- */
+.form_continer{
+    width: 30%;
+    height: 33rem;
+    padding: 1%;
+    margin: 1px;
+    background-color: #022144;
+    /* background-color: #03586d; */
+    /* border: 1px solid #0400ff; */
+    border-radius: 10px;
+    /* display: none;    */
+}
+.form{
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px yellow;
+    position: relative;
+}
+.form_heading{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #ffff74;
+    text-shadow: 2px 2px red;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+.input_text{
+    width: 90%;
+    padding: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: larger;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: #fff;
+    background-color: transparent;
+}
+.input_text::placeholder{
+    color: #fff;
+}
+.input_text:focus{
+    outline: 2px solid white;
+}
+.input_dropdown{
+    width: 94.5%;
+    padding: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: larger;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: #fff;
+    background-color: transparent;
+}
+.input_dropdown>option{
+    color: #fff;
+    background-color: #022144;
+}
+.input_dropdown:focus{
+    outline:2px solid #fff;
+}
+.form_btn_submit{
+    width: 94%;
+    padding: 2%;
+    margin-left: 3% ;
+    margin-top: 10% ;
+    font-size: x-large;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: transparent;
+    border:  3px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 1px red;
+}
+.form_btn_submit:hover{
+    color: white;
+    background-color: transparent;
+    border:  4px solid rgb(255, 255, 255);
+    text-shadow: 2px 3px 2px red;
+    box-shadow: 0px 0px 0px;
+
+}
+
+/* -----------Table Design--------- */
+.table_continer{
+    width: 70%;
+    height: 33rem;
+    padding: 1%;
+    margin: 1px; 
+    /* border: 1px solid #0400ff; */
+    border-radius: 10px;
+    background-color: #022144;
+    /* background-color: #03586d; */
+    overflow-y: scroll;
+    
+}
+.tbl{
+    width: 100%;
+    height: auto;
+    padding: 4px;
+    border-collapse: collapse;
+    text-align: center;
+    box-shadow: 0px 0px 20px yellow;
+
+}
+.tbl_head{
+    font-size: larger;
+    background-color: #ffff74;
+}
+.tbl_body{
+    color: #fff;
+    background-color: #ffff7427;
+    overflow: hidden;
+}
+td{
+    padding: 10px;
+}
+.td1{
+    display: none;
+}
+/** --------Dom-btn-------- */
+.btnEdit{
+    width: 100%;
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    background-color: gold;
+    cursor: pointer;
+}
+.btnDel{
+    width: 90%;
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+.btnEdit:hover,.btnDel:hover{
+    color: white;
+    background-color: black;
+}
+/* **************************************** */
+/* Result form */
+.resultbody{
+    text-align: center;
+    overflow: hidden;
+}
+.SearchResult{
+    /* width: 100%; */
+    /* border: 1px solid red; */
+    margin: 1%;
+
+}
+.inptext{
+    width: 20%;
+    padding: 2px;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: larger;
+    border-radius: 10px;
+    color: #000000;
+    background-color: transparent;
+    margin-right: 5px;
+
+}
+.Searchbtn{
+    width: 14%;
+    padding: 2px;
+    font-size: larger;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #022144;
+    border:  3px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 1px red;
+    /* margin: 1%; */
+    margin-left: 10px;
+
+}
+.Searchbtn:hover{
+    color: white;
+    background-color: #022144;
+    border:  4px solid rgb(255, 255, 255);
+    text-shadow: 2px 3px 2px red;
+    box-shadow: 0px 2px 1px red;
+
+}
+.result{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
