@@ -106,9 +106,8 @@ const rendertbl = () => {
                         <td id="td5">${data.stdCnic}</td>
                         <td id="td6">${data.selectType}</td>
                         <td><button class="btnEdit" id="btnEdit">Edit</button></td>
-                        <td><button class="btnDel" id="btnDel">Delete</button></td>
-                </tr>
-              `
+                        </tr>
+                        `
               let btnDel = document.getElementById("btnDel")
               btnDel.addEventListener("click",()=>{
                 let docref = doc(db,"Student")
