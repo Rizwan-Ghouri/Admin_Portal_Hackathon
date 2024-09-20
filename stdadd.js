@@ -107,14 +107,8 @@ const rendertbl = () => {
                         <td id="td6">${data.selectType}</td>
                         <td><button class="btnEdit" id="btnEdit">Edit</button></td>
                         </tr>
-                        `
-              let btnDel = document.getElementById("btnDel")
-              btnDel.addEventListener("click",()=>{
-                let docref = doc(db,"Student")
-                deleteDoc(docref,stdaddObj)
-                tblbody.firstChild.remove()
-                // btnDel.parentNode.parentNode.parentNode.firstChild.remove()                
-            })
+                    `
+           
             })      
         }
 
