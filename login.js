@@ -24,8 +24,6 @@ const analytics = getAnalytics(app);
 const auth = getAuth();
 const db = getFirestore();
 
-
-
 // let loginBtn = document.getElementById("btnlog")
 // let inpSelect = document.getElementById("inputselect")
 let inpEmail = document.getElementById("inpEmail")
@@ -46,7 +44,7 @@ window.btnlog = () => {
             const logSnap = await getDoc(logRefrence);
             // ********************************//
             // get exists stduser
-            if (logSnap.exists()){
+            if (logSnap.exists()) {
                 console.log("Document data:", logSnap.data());
                 checkType.push({ ...logSnap.data() })
                 // ********************************//
@@ -63,16 +61,16 @@ window.btnlog = () => {
                         setTimeout(() => {
                             location.replace("dash.html")
                         }, 2000);
-                    } 
+                    }
                     else {
                         let type = localStorage.getItem("input")
                         Swal.fire({
                             title: "Error!",
                             text: `type not exists 0nly(${type})`,
                             icon: "error"
-                          });
+                        });
                     }
-                    })
+                })
             }
 
         }).catch((err) => {
@@ -81,7 +79,7 @@ window.btnlog = () => {
                 title: "Error!",
                 text: `User not exists ${err}`,
                 icon: "error"
-              });
+            });
             // console.log(err);
         })
 }

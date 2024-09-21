@@ -11,12 +11,12 @@
         <nav class="headNav">
             <div class="headlogo">
                <a class="headlogo_tag" href=""><h1 class="heading" id="heading"></h1></a> 
-            </div>
-            <div class="headsec">
-                <ul class="headsec_ul">
-                    <button class="headsec_tag" id="stdHome" ><li>Home</li></button> 
-                    <button class="headsec_tag" id="signOut" href="#" ><li>Sign Out</li></button>
-                </ul>
+              </div>
+              <div class="headsec">
+              <ul class="headsec_ul">
+                  <button class="headsec_tag" id="stdHome" ><li>Back</li></button> 
+                  <button class="headsec_tag" id="signOut" href="#" ><li>Sign Out</li></button>
+              </ul>
             </div>
         </nav>
     </header>
@@ -24,7 +24,13 @@
         <div class="form_continer">
           <div class="form" id="form">
             <h1 class="form_heading">Student Marks</h1>
-            <input type="number" class="input_text" id="stdId" placeholder="Enter your student Id">
+            <input type="number" class="input_text" id="stdId" placeholder="Enter your student Id" autocomplete="off">
+            <br />
+            <br />
+            <input type="text" class="input_text" id="stdName" placeholder="Enter your First Name">
+            <br />
+            <br />
+            <input type="number" class="input_text" id="stdCNIC" placeholder="Enter your CNIC">
             <br />
             <br />
             <select class="input_dropdown"  name="" id="stdCourse">
@@ -53,7 +59,7 @@
             </select>
             <br />
             <br />
-           <button class="form_btn_submit" id="btnsubmit" onclick="submit()">Submit</button>
+           <button class="stdMarks_btn_submit" id="btnsubmit" onclick="submit()">Submit</button>
           </div>
         </div>
         <div class="table_continer">
@@ -61,6 +67,8 @@
             <thead class="tbl_head">
               <tr>
                 <th>Student Id</th>
+                <th>Name</th>
+                <th>CNIC</th>
                 <th>Course</th>
                 <th>Total Marks</th>
                 <th>Marks</th>
@@ -74,7 +82,6 @@
           </table>
         </div>
       </div>
-
 
     <script type="module" src="stdMark.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.14.0/sweetalert2.all.js" integrity="sha512-HE6XTjw3UV1hqENThKtsSn4mr3sx/lXbTSVPlOdIU3pprqz5ti16sGIGw8y5EAePRYg80O3OEBRnXPwON7vOUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

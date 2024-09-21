@@ -7,18 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="resultbody">
+  <header class="header">
+    <nav class="headNav">
+        <div class="headlogo">
+           <a class="headlogo_tag" href=""><h1 class="heading" id="heading"></h1></a> 
+        </div>
+        <div class="headsec">
+            <ul class="headsec_ul">
+              <div class="SearchResult">
+                <input type="search" name="" class="inptext" id="inptext" placeholder="Search Student Id after Enter press">
+                <button type="submit" class="resultbtn" id="home">Back</button>
+            </div>
+            </ul>
+        </div>
+    </nav>
+</header>
 
-    <div class="SearchResult">
-        <input type="search" name="" class="inptext" id="inptext">
-        <button type="submit" class="Searchbtn" id="Search">Search</button>
-        <button type="submit" class="Searchbtn" id="home">Home</button>
-    </div>
     <div class="result">
         <div class="table_continer">
             <table class="tbl">
               <thead class="tbl_head">
                 <tr>
                 <th>Student Id</th>
+                <th>Name</th>
+                <th>CNIC</th>
                 <th>Course</th>
                 <th>Total Marks</th>
                 <th>Marks</th>

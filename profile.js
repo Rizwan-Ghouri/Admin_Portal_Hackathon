@@ -29,9 +29,11 @@
 // window.btnSubmit = ()=>{
  
 // }
+
 let studentArr = []
 let tblbody = document.getElementById("tblbody")
 
+// get Student Data Show Table
 const rendertbl = () => {
     tblbody.innerHTML = ""
     studentArr.forEach((data)=>{
@@ -45,47 +47,10 @@ const rendertbl = () => {
                 <td><button class="btnEdit" id="btnEdit">Edit</button></td>
               </tr>
         `
-    //    console.log(get);
-       
-        // let btnEdit = document.getElementById("btnEdit").addEventListener("click",()=>{
-        //     studentArr.forEach(x => {
-        //         console.log(x);
-        //     });
-        // })
-    //     let flag = false
-    //     let btnEdit = document.getElementById("btnEdit")
-    //     btnEdit.addEventListener("click",()=>{
-    //     for (let i = 0; i < studentArr.length; i++) {
-    //         const element = studentArr[i];
-                
-    //             let stdFname = document.getElementById("stdFname")
-    //             let stdLname = document.getElementById("stdLname")
-    //             let stdCnic = document.getElementById("stdCnic")
-    //         let update = {
-    //             updFName : studentArr[i].stdFname,
-    //             updLName : studentArr[i].stdLname,
-    //             updCnic : studentArr[i].stdCnic
-    //         }
-    //         flag = true
-    //         console.log(update);  
-    //         break;
-            
-    //         // let updFName = update.updFName += stdFname.value
-    //         // let updLName = update.updLName += stdLname.value
-    //         // let updCNIC = update.updCnic    += stdCnic.value
-    //         // console.log(updFName);
-    //         // console.log(updLName);
-    //         // console.log(updCNIC);    
-    //     }
-    // })
-    // if (flag = false) {
-    //     console.log("not exit");
-        
-    // }
-
     })
 }
 
+// get Student Data form Edit Profile
 const getData = async () => {
     const getRefrence = collection(db,"Student")
     const td = await getDocs(getRefrence)
@@ -99,13 +64,13 @@ const getData = async () => {
 }
 getData()
 
-
+// goBack
 let home = document.getElementById("stdHome")
 home.addEventListener("click", () => {
     location.replace("dash.html")
 })
-
+// go login form
 let signOut = document.getElementById("signOut")
 signOut.addEventListener("click", () => {
-    location.replace("login.html")
+    location.replace("index.html")
 })

@@ -1,30 +1,30 @@
- // Import the functions you need from the SDKs you need
- import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
- import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
- import { getAuth,createUserWithEmailAndPassword,deleteUser} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
- import { getFirestore,doc, setDoc,collection, getDocs,deleteDoc} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
- // TODO: Add SDKs for Firebase products that you want to use
- // https://firebase.google.com/docs/web/setup#available-libraries
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
+import { getFirestore, doc, setDoc, collection, getDocs} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
- // Your web app's Firebase configuration
- // For Firebase JS SDK v7.20.0 and later, measurementId is optional
- const firebaseConfig = {
-   apiKey: "AIzaSyD3AMi3u5Qwv11z7tlUP6qcs9wZiMw2I3A",
-   authDomain: "task-project-c94df.firebaseapp.com",
-   projectId: "task-project-c94df",
-   storageBucket: "task-project-c94df.appspot.com",
-   messagingSenderId: "417078899457",
-   appId: "1:417078899457:web:c83c679a9e86c17eb0a100",
-   measurementId: "G-D6E0R7VF31"
- };
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyD3AMi3u5Qwv11z7tlUP6qcs9wZiMw2I3A",
+    authDomain: "task-project-c94df.firebaseapp.com",
+    projectId: "task-project-c94df",
+    storageBucket: "task-project-c94df.appspot.com",
+    messagingSenderId: "417078899457",
+    appId: "1:417078899457:web:c83c679a9e86c17eb0a100",
+    measurementId: "G-D6E0R7VF31"
+};
 
- // Initialize Firebase
- const app = initializeApp(firebaseConfig);
- const analytics = getAnalytics(app);
- const auth = getAuth();
- const db = getFirestore();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth();
+const db = getFirestore();
 
- // stdadd get id
+// stdadd get id
 let stdFname = document.getElementById("stdFname")
 let stdLname = document.getElementById("stdLname")
 let stdEmail = document.getElementById("stdEmail")
@@ -32,50 +32,50 @@ let stdPass = document.getElementById("stdPass")
 let stdCnic = document.getElementById("stdCnic")
 let selectType = document.getElementById("stdselectType")
 
- // Submit stdadd 
-window.btnSubmit = ()=>{
+// Submit stdadd 
+window.btnSubmit = () => {
     let stdaddObj = {
-        stdFname : stdFname.value,
-        stdLname : stdLname.value,
-        stdEmail : stdEmail.value,
-        stdPass : stdPass.value,
-        stdCnic : stdCnic.value,
-        selectType : selectType.value
+        stdFname: stdFname.value,
+        stdLname: stdLname.value,
+        stdEmail: stdEmail.value,
+        stdPass: stdPass.value,
+        stdCnic: stdCnic.value,
+        selectType: selectType.value
     }
-    if (stdFname.value != ""&&stdLname.value != ""&&stdCnic.value != ""&&selectType.value) {        
-        createUserWithEmailAndPassword(auth,stdaddObj.stdEmail,stdaddObj.stdPass)
-        .then((res)=>{
-             stdaddObj.id = res.user.uid;
-            // console.log(stdaddObj.id);
-            let refrence = doc(db,"Student",stdaddObj.id)
-            setDoc(refrence,stdaddObj)
-            .then((dbres)=>{
-                // console.log(dbres);
-                Swal.fire({
-                    title: "Good job!",
-                    text: dbres,
-                    icon: "success"
-                  });
-                  setTimeout(()=>{
-                    location.reload()
-                  },2000)
-            }).catch((dberr)=>{
+    if (stdFname.value != "" && stdLname.value != "" && stdCnic.value != "" && selectType.value) {
+        createUserWithEmailAndPassword(auth, stdaddObj.stdEmail, stdaddObj.stdPass)
+            .then((res) => {
+                stdaddObj.id = res.user.uid;
+                // console.log(stdaddObj.id);
+                let refrence = doc(db, "Student", stdaddObj.id)
+                setDoc(refrence, stdaddObj)
+                    .then((dbres) => {
+                        // console.log(dbres);
+                        Swal.fire({
+                            title: "Good job!",
+                            text: dbres,
+                            icon: "success"
+                        });
+                        setTimeout(() => {
+                            location.reload()
+                        }, 2000)
+                    }).catch((dberr) => {
+                        Swal.fire({
+                            title: "Error!",
+                            text: dberr,
+                            icon: "error"
+                        });
+                        // console.log(dberr);
+                    })
+
+            }).catch((err) => {
                 Swal.fire({
                     title: "Error!",
-                    text: dberr,
+                    text: err,
                     icon: "error"
-                  });
-                // console.log(dberr);
+                });
+                // console.log(err);
             })
-    
-        }).catch((err)=>{
-            Swal.fire({
-                title: "Error!",
-                text: err,
-                icon: "error"
-              });
-            // console.log(err);
-        })
         stdFname.value = ""
         stdLname.value = ""
         stdEmail.value = ""
@@ -87,16 +87,17 @@ window.btnSubmit = ()=>{
             title: "Error!",
             text: `Please input filled`,
             icon: "error"
-          });
+        });
     }
 }
 
 let studentArr = []
 let tblbody = document.getElementById("tblbody")
 
+// get Submit Student data show Table
 const rendertbl = () => {
     tblbody.innerHTML = ""
-    studentArr.forEach((data)=>{
+    studentArr.forEach((data) => {
         tblbody.innerHTML += `
                 <tr>
                         <td class="td1" id="td1">${data.id}</td>
@@ -108,17 +109,17 @@ const rendertbl = () => {
                         <td><button class="btnEdit" id="btnEdit">Edit</button></td>
                         </tr>
                     `
-           
-            })      
-        }
 
+    })
+}
+// get Submit Student data 
 const getData = async () => {
-    const getRefrence = collection(db,"Student")
+    const getRefrence = collection(db, "Student")
     const td = await getDocs(getRefrence)
     td.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         // console.log(doc.id, " => ", doc.data());
-        studentArr.push({...doc.data(),id : doc.id})
+        studentArr.push({ ...doc.data(), id: doc.id })
         // console.log(studentArr);
     });
     rendertbl()
@@ -129,9 +130,11 @@ getData()
 let signOut = document.getElementById("signOut")
 let stdHome = document.getElementById("stdHome")
 
-stdHome.addEventListener("click",()=>{
+// go back
+stdHome.addEventListener("click", () => {
     location.replace("dash.html")
 })
-signOut.addEventListener("click",()=>{
-    location.replace("login.html")
+// go index form
+signOut.addEventListener("click", () => {
+    location.replace("index.html")
 })

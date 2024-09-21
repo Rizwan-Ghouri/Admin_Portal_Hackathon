@@ -23,22 +23,21 @@ const analytics = getAnalytics(app);
 const db = getFirestore();
 
 
-let resultArr = []
-let tblbody = document.getElementById("tblbody")
-const rendertbl = () => {
-    tblbody.innerHTML = ""
-    resultArr.forEach((data) => {
-        tblbody.innerHTML += `
-        <tr>
-            <td id="td1">${data.stdId}</td>
-            <td>${data.stdCourse}</td>
-            <td>${data.stdTotalmarks}</td>
-            <td>${data.stdMarks}</td>
-            <td>${data.stdGrade}</td>
-        </tr>
-    `
-    })     
-}
+// let tblbody = document.getElementById("tblbody")
+// const rendertbl = () => {
+//     tblbody.innerHTML = ""
+//     resultArr.forEach((data) => {
+//         tblbody.innerHTML += `
+//     //     <tr>
+//     //         <td id="td1">${data.stdId}</td>
+//     //         <td>${data.stdCourse}</td>
+//     //         <td>${data.stdTotalmarks}</td>
+//     //         <td>${data.stdMarks}</td>
+//     //         <td>${data.stdGrade}</td>
+//     //     </tr>
+//     // `
+//     })     
+// }
 
 
 const getResult = async () => {
@@ -49,36 +48,45 @@ const getResult = async () => {
         resultArr.push({ ...doc.data(), id: doc.id })
         // console.log(resultArr);
     });
-    rendertbl()
+    // rendertbl()
 }
 getResult()
 
 
-
+let resultArr = []
+let heading = document.getElementById("heading")
 let inptext = document.getElementById("inptext")
-let search = document.getElementById("Search")
-search.addEventListener("click",function(){
-    // let arr = []
-//    let filt = resultArr.filter(x=>{
-       let filter = resultArr.filter(x=>{
-            // let text = x.stdId
-            if (inptext.value == x.stdId) {
-                tblbody.innerHTML = ""
-                tblbody.innerHTML += `
-                <tr>
-                      <td id="td1">${x.stdId}</td>
-                      <td>${x.stdCourse}</td>
-                      <td>${x.stdTotalmarks}</td>
-                      <td>${x.stdMarks}</td>
-                      <td>${x.stdGrade}</td>
-                    </tr>
-              `
-            } 
+
+// show total student
+inptext.addEventListener("click",function(){
+    resultArr.filter(()=>{
+        let length = resultArr.length
+        heading.innerText = `Total Id : ${length}`
+    })
+})
+
+// Dan in cnic input to filter the result 
+inptext.addEventListener("keypress",function(){
+    let filter = resultArr.filter(x=>{
+        if (inptext.value == x.stdCNIC) {
+            tblbody.innerHTML = ""
+            tblbody.innerHTML += `
+            <tr>
+            <td>${x.stdId}</td>
+            <td>${x.stdName}</td>
+            <td>${x.stdCNIC}</td>
+            <td>${x.stdCourse}</td>
+            <td>${x.stdTotalmarks}</td>
+            <td>${x.stdMarks}</td>
+            <td>${x.stdGrade}</td>
+            </tr>
+            `
+        }
     })
 })
 
 let home = document.getElementById("home")
-
+// go back
 home.addEventListener("click", () => {
     location.replace("dash.html")
 })

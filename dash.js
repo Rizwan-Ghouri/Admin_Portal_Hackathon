@@ -5,7 +5,6 @@
    let stdResult = document.getElementById("stdResult")
    let logIn = document.getElementById("logIn")
    let signOut = document.getElementById("signOut")
-   let btnlog = document.getElementById("btnlogAdmin")
    
    let selectType = localStorage.getItem("input")
    let heading = document.getElementById("heading")
@@ -15,10 +14,9 @@
        if(heading.innerText == "Student") {
            stdAdd.style.display = "none"
            stdMarks.style.display = "none"
-           logIn.style.display = "none"
        }
        if (heading.innerText == "Admin") {
-        stdResult.style.display = "none"
+            stdResult.style.display = "none"
        }
    }
    hide();
@@ -28,16 +26,13 @@
    stdMarks.addEventListener("click",()=>{
        location.replace("stdMark.html")
    })
-   stdResult.addEventListener("click",()=>{
-       location.replace("result.html")
-   })
    stdpro.addEventListener("click",()=>{
        location.replace("profile.html")
    })
-   logIn.addEventListener("click",()=>{
-       location.replace("login.html")
+   stdResult.addEventListener("click",()=>{
+       location.replace("result.html")
    })
    signOut.addEventListener("click",()=>{
-       location.replace("login.html")
+       location.replace("index.html")
    })
    

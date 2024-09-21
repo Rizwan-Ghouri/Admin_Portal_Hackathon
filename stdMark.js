@@ -23,14 +23,17 @@
  const db = getFirestore();
 
  let stdId = document.getElementById("stdId")
+ let stdName = document.getElementById("stdName")
+ let stdCNIC = document.getElementById("stdCNIC")
  let stdCourse = document.getElementById("stdCourse")
-//  let stdTotalmarks = document.getElementById("stdTotalmarks")
  let stdMarks = document.getElementById("stdMarks")
-//  let stdGrade = document.getElementById("stdGrade")
+ let stdGrade = document.getElementById("stdGrade")
 
  window.submit = () => {
     let stdResult = {
         stdId : stdId.value,
+        stdName : stdName.value,
+        stdCNIC : stdCNIC.value,
         stdCourse : stdCourse.value,
         stdTotalmarks : 100,
         stdMarks : stdMarks.value,
@@ -73,13 +76,15 @@
 
 let resultArr = []
 let tblbody = document.getElementById("tblbody")
-
+// get Student Marks Show table
 const rendertbl = ()=>{
     tblbody.innerHTML = ""
     resultArr.forEach((data)=>{
         tblbody.innerHTML += `
           <tr>
                 <td>${data.stdId}</td>
+                <td>${data.stdName}</td>
+                <td>${data.stdCNIC}</td>
                 <td>${data.stdCourse}</td>
                 <td>${data.stdTotalmarks}</td>
                 <td>${data.stdMarks}</td>
@@ -90,8 +95,8 @@ const rendertbl = ()=>{
     })
 }
 
-
-const getResult = async () => {
+// get Student Marks
+const getMarks = async () => {
     const getRefrence = collection(db,"Result")
     const tbldata = await getDocs(getRefrence)
     tbldata.forEach((doc) => {
@@ -101,15 +106,16 @@ const getResult = async () => {
       }); 
       rendertbl()
 }
-getResult()
+getMarks()
 
-
+// header
 let signOut = document.getElementById("signOut")
 let stdHome = document.getElementById("stdHome")
-
+// go back
 stdHome.addEventListener("click",()=>{
     location.replace("dash.html")
 })
+// go inndex form
 signOut.addEventListener("click",()=>{
-    location.replace("login.html")
+    location.replace("index.html")
 })
